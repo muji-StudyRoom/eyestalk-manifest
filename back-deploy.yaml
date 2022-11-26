@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: back
+  name: back-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: back
+  template:
+    metadata:
+      labels:
+        app: back
+    spec:
+      containers:
+      - env:
+        - name: SERVER_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: eyestalk-cm
+              key: SERVER_PORT
+        - name: SPRING_DATASOURCE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: eyestalk-cm
+              key: SPRING_DATASOURCE_URL
+        - name: expose
+          valueFrom:
+            configMapKeyRef:
+              name: eyestalk-cm
+              key: expose
+        - name: SPRING_DATASOURCE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: username-pwd-secret
+              key: username
+        - name: SPRING_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: username-pwd-secret
+              key: password
+        image: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-spring:v0.1.6
+        name: back
+        ports:
+        - containerPort: 8080
+          name: back-container
+      restartPolicy: Always
+      
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: back
+  name: back-svc
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+  selector:
+    app: back

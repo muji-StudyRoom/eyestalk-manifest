@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: front
+  name: front-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+      - name: front-container
+        image: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react:v0.2.19
+        ports:
+        - containerPort: 3000
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: front-svc
+spec:
+  type: NodePort
+  selector:
+    app: front
+  ports:
+  - port: 3000
+    targetPort: 3000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-front-end
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip # using IP routing policy of ALB
+    alb.ingress.kubernetes.io/subnets: subnet-0b5818ff36bc0f4c8, subnet-0c6c725d0881c9482, subnet-07af587ef3aeeacf5, subnet-0a5ea8991f021c361
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: front-svc # refer to the service defined in deploy.yaml
+                port:
+                  number: 3000

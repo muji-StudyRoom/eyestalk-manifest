@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: eyestalk-cm
+data:
+  MARIADB_DATABASE: "eyestalk"
+  SERVER_PORT: "8080"
+  SPRING_DATASOURCE_URL: "jdbc:mysql://jupiterdb.cbll7n774vcb.ap-northeast-2.rds.amazonaws.com:3306/test2db?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true"
+  expose: "8080"
+  API_IP: "myapp:8080"
