@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+images:
+- name: /
+  newName: /
+- name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-python
+  newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-python
+  newTag: test-python
+- name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react
+  newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react
+  newTag: test-react
+- name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-spring
+  newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-spring
+  newTag: test-spring
+
+resources:
+- ../../resources
