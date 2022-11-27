@@ -4,6 +4,7 @@ metadata:
   labels:
     app: back
   name: back-deploy
+  namespace: default
 spec:
   replicas: 1
   selector:
