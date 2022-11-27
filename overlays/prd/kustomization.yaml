@@ -12,7 +12,7 @@ images:
   newTag: v0.2.38
 - name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-spring
   newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-spring
-  newTag: test-spring
+  newTag: v0.1.19
 
 resources:
 - ../../resources
