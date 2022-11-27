@@ -58,7 +58,7 @@ spec:
                 name: front-svc # refer to the service defined in deploy.yaml
                 port:
                   number: 3000
-          - path: /
+          - path: /socket
             pathType: Prefix
             backend:
               service:
