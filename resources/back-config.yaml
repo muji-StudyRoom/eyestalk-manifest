@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: eyestalk-cm
+  namespace: default
 data:
   MARIADB_DATABASE: "eyestalk"
   SERVER_PORT: "8080"
