@@ -37,19 +37,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  labels:
+    app: sig
   name: sig-svc
   namespace: default
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-type: external
-    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
-    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
-    service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-0b5818ff36bc0f4c8, subnet-0c6c725d0881c9482, subnet-07af587ef3aeeacf5, subnet-0a5ea8991f021c361
 spec:
   ports:
     - port: 5000
-      targetPort: 5000
-      protocol: TCP
-  type: LoadBalancer
+  type: ClusterIP
   sessionAffinity: ClientIP
   selector:
     app: sig
