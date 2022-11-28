@@ -30,7 +30,7 @@ spec:
         - name: SPRING_PORT
           value: '8080'
         - name: REDIS_IP
-          value: "redis-svc"
+          value: "redis://redis-svc"
         - name: REDIS_PORT
           value: '6379'
 ---
