@@ -9,7 +9,7 @@ images:
   newTag: v1.4.13
 - name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react
   newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react
-  newTag: v0.2.53
+  newTag: v0.2.54
 - name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-spring
   newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-spring
   newTag: v0.1.20
