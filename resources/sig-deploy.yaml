@@ -45,6 +45,7 @@ spec:
   ports:
     - port: 5000
   type: ClusterIP
+  sessionAffinity: ClusterIP
   selector:
     app: sig
 ---
