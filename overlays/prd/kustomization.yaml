@@ -6,10 +6,10 @@ images:
   newName: /
 - name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-python
   newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-python
-  newTag: v1.4.13
+  newTag: v1.4.17
 - name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react
   newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react
-  newTag: v0.2.52
+  newTag: v0.2.55
 - name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-spring
   newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-spring
   newTag: v0.1.20
