@@ -6,9 +6,10 @@ metadata:
   name: sig-svc
   namespace: default
 spec:
+  type: NodePort
   ports:
     - port: 5000
-  type: ClusterIP
+      targetPort: 5000
   sessionAffinity: ClientIP
   selector:
     app: sig
