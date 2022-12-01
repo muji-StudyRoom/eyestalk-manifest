@@ -6,7 +6,7 @@ metadata:
   name: sig-svc
   namespace: default
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
     - port: 5000
       targetPort: 5000
