@@ -58,10 +58,10 @@ metadata:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/subnets: 	subnet-0c1b964b7812dd512, subnet-021a53c08b0b9865d, subnet-05b587954a63c6d82, subnet-049c715b9991e8390
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":5000}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:675694928506:certificate/580ad154-219c-4bcd-9560-535d06351f43
-    alb.ingress.kubernetes.io/target-group-attributes: stickiness.enabled=true,stickiness.lb_cookie.duration_seconds=300
-    alb.ingress.kubernetes.io/target-type: ip # using IP routing policy of ALB
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":5000}]'
+    #alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:675694928506:certificate/580ad154-219c-4bcd-9560-535d06351f43
+    #alb.ingress.kubernetes.io/target-group-attributes: stickiness.enabled=true,stickiness.lb_cookie.duration_seconds=300
+    #alb.ingress.kubernetes.io/target-type: ip # using IP routing policy of ALB
 spec:
   rules:
     - http:
