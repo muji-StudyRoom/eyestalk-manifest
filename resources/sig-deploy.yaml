@@ -61,7 +61,7 @@ metadata:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":5000}]'
     #alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:675694928506:certificate/580ad154-219c-4bcd-9560-535d06351f43
     #alb.ingress.kubernetes.io/target-group-attributes: stickiness.enabled=true,stickiness.lb_cookie.duration_seconds=300
-    #alb.ingress.kubernetes.io/target-type: ip # using IP routing policy of ALB
+    alb.ingress.kubernetes.io/target-type: ip # using IP routing policy of ALB
 spec:
   rules:
     - http:
