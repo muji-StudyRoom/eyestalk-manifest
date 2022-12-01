@@ -7,6 +7,7 @@ metadata:
   namespace: default
 spec:
   type: ClusterIP
+  sessionAffinity: ClientIP
   ports:
     - port: 5000
   selector:
@@ -23,7 +24,7 @@ metadata:
     alb.ingress.kubernetes.io/subnets: 	subnet-0c1b964b7812dd512, subnet-021a53c08b0b9865d, subnet-05b587954a63c6d82, subnet-049c715b9991e8390
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:675694928506:certificate/580ad154-219c-4bcd-9560-535d06351f43
-    alb.ingress.kubernetes.io/target-group-atrtributes: stickiness.enabled=true,stickiness.lb_cookie.duration_seconds=300
+    alb.ingress.kubernetes.io/target-group-atrtributes: stickiness.enabled=true,stickiness.lb_cookie.duration_seconds=3600
     alb.ingress.kubernetes.io/target-type: ip # using IP routing policy of ALB
 spec:
   rules:
