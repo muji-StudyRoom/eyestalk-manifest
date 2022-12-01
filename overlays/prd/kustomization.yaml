@@ -6,7 +6,7 @@ images:
   newName: /
 - name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-python
   newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-python
-  newTag: v1.4.25
+  newTag: v1.4.26
 - name: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react
   newName: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react
   newTag: v0.2.73
