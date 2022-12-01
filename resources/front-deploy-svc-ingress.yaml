@@ -1,27 +1,3 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
-    app: front
-  name: front-deploy
-  namespace: default
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: front
-  template:
-    metadata:
-      labels:
-        app: front
-    spec:
-      containers:
-      - name: front-container
-        image: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react:v0.2.19
-        ports:
-        - containerPort: 3000
-      restartPolicy: Always
----
 apiVersion: v1
 kind: Service
 metadata:
@@ -58,4 +34,28 @@ spec:
                 name: front-svc # refer to the service defined in deploy.yaml
                 port:
                   number: 3000
-          
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: front
+  name: front-deploy
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+      - name: front-container
+        image: 675694928506.dkr.ecr.ap-northeast-2.amazonaws.com/eyestalk-react:v0.2.19
+        ports:
+        - containerPort: 3000
+      restartPolicy: Always
+
