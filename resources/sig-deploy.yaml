@@ -62,7 +62,7 @@ spec:
         - containerPort: 5000
         env:
         - name: ES_IP
-          value: "testing ES"
+          value: "http://abb6ec4d0ace44a07b0aa781fb01e587-123484602.ap-northeast-2.elb.amazonaws.com"
         - name: ES_PORT
           value: '9200'
         - name: SPRING_IP
