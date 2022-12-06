@@ -53,7 +53,7 @@ spec:
       volumes:
       - name: tz-seoul
         hostPath:
-        path: /usr/share/zoneinfo/Asia/Seoul
+          path: /usr/share/zoneinfo/Asia/Seoul
       restartPolicy: Always
 ---
 apiVersion: v1
