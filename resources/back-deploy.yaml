@@ -47,14 +47,14 @@ spec:
         ports:
         - containerPort: 8080
           name: back-container
-      restartPolicy: Always
-      volumeMounts:
+        volumeMounts:
         - name: tz-seoul
           mountPath: /etc/localtime
-    volumes:
-    - name: tz-seoul
-      hostPath:
-      path: /usr/share/zoneinfo/Asia/Seoul
+      volumes:
+      - name: tz-seoul
+        hostPath:
+        path: /usr/share/zoneinfo/Asia/Seoul
+      restartPolicy: Always
 ---
 apiVersion: v1
 kind: Service
