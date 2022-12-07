@@ -5,7 +5,7 @@
 <br>
 <br>
 
-# CI/CD PipeLine
+# ☀️ CI/CD PipeLine
 Kustomize, ArgoCD, ECR, GithubAction 사용
 ![image](https://user-images.githubusercontent.com/73453283/206051230-c570cbe3-abe7-4329-b7ca-0472fbf87b02.png)
 <br>
@@ -21,7 +21,7 @@ Kustomize, ArgoCD, ECR, GithubAction 사용
 <br>
 <br>
 
-# EKS 구축
+# ☀️ EKS 구축
 ![image](https://user-images.githubusercontent.com/73453283/206074481-88b4e5d3-bd7f-4edb-9ae4-abf1ac1cf8a5.png)
 ## Terraform
 #### 가용영역
@@ -40,7 +40,7 @@ Kustomize, ArgoCD, ECR, GithubAction 사용
 <br>
 <br>
 
-# 모니터링
+# ☀️ 모니터링
 ## 성능 모니터링
 - 클러스터의 상태를 모니터링하기 위해 helm, 메트릭 서버, prometheus, Distro를 설치
 - 메트릭로그를 Cloudwatch에 자동으로 수집하여 배포한 애플리케이션의 성능 모니터링이 가능
@@ -48,8 +48,11 @@ Kustomize, ArgoCD, ECR, GithubAction 사용
 - 비용 절감을 위하여 일정 CPU사용량이 넘어가면 경보알람으로 이메일 알람 설정
 <br>
 
+### CloudWatch 대시보드
 ![image](https://user-images.githubusercontent.com/73453283/206075542-0100fbe2-a6d2-46c6-9f0d-f2a5c0145014.png)
+### 경보 알람 메일 확인
 ![image](https://user-images.githubusercontent.com/73453283/206075685-47769841-ffd8-4554-94f4-31a2ce12dff5.png)
+![image](https://user-images.githubusercontent.com/73453283/206077277-48fc42bb-130d-4fb1-9354-05f4c56a5b56.png)
 
 <br>
 
@@ -70,7 +73,7 @@ Kustomize, ArgoCD, ECR, GithubAction 사용
 
 <br>
 
-### 대시보드 구성
+### Kibana 대시보드 구성
 | 대시보드 | 설명 |
 | --- | --- |
 | 24H 방 생성 사용량 | 24시간동안 어느 시간대에 방이 많이 생성되는 지를 확인할 수 있다.  |
