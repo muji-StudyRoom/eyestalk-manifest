@@ -16,7 +16,12 @@ Kustomize, ArgoCD, ECR, GithubAction 사용
 <br>
 
 ## ArgoCD
-![image](https://user-images.githubusercontent.com/73453283/206051199-572affe9-f45b-46d1-966d-639b611a3462.png)
+- GithubAction으로 연결된 코드가 push될 때 ArgoCD가 동기화되어 자동으로 코드가 반영된다
+<br>
+
+![2022-12-08 16 00 19](https://user-images.githubusercontent.com/73453283/206380718-62d199f8-b5b5-4f02-ab52-0b044a718cae.gif)
+
+
 
 <br>
 <br>
