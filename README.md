@@ -53,9 +53,12 @@ Kustomize, ArgoCD, ECR, GithubAction 사용
 - 비용 절감을 위하여 일정 CPU사용량이 넘어가면 경보알람으로 이메일 알람 설정
 <br>
 
+### CloudWatch Container Insight
+![2022-12-14 15 11 46](https://user-images.githubusercontent.com/73453283/208239885-10946b33-4d17-4781-a22d-32cb4879b784.gif)
+
 ### CloudWatch 대시보드
 ![image](https://user-images.githubusercontent.com/73453283/206075542-0100fbe2-a6d2-46c6-9f0d-f2a5c0145014.png)
-### 경보 알람 메일 확인
+### CloudWatch 경보 알람 메일 확인
 ![image](https://user-images.githubusercontent.com/73453283/206075685-47769841-ffd8-4554-94f4-31a2ce12dff5.png)
 ![image](https://user-images.githubusercontent.com/73453283/206077277-48fc42bb-130d-4fb1-9354-05f4c56a5b56.png)
 
@@ -89,5 +92,6 @@ Kustomize, ArgoCD, ECR, GithubAction 사용
 <br>
 
 ![image](https://user-images.githubusercontent.com/73453283/206076638-28a130f7-bfcc-4e55-bef5-9aa2d637dbf3.png)
+
 
 
